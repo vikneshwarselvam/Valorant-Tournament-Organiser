@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>Valorant Tournament</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">-->
+        <link href="{{ url_for('static', filename='css/production.css') }}" rel="stylesheet" media="all">
+        <!-- Web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+    </head>
+
+    <body class="has-animations">
+
+
+    <!-- Create outer border -->
+    <div class="page-border">
+    <div class="bg--white">
+
+        <!-- Header -->
+        <header class="align--center pt3 pb2">
+            <div class="container">
+
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="VAASTU ANALYSER" style="width: 100px;height: 100px;">
+                <h1 class="mb3 reveal-on-scroll is-revealing">Valorant Tournament</h1>
+                <h2 class="mb3 reveal-on-scroll is-revealing">Test</h2>
+
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action = "/teams" method = "POST" enctype = "multipart/form-data">
+            <!--<input type = "file" name = "file" />
+            <input type = "submit"/> -->
+              <div class="frame">
+       <div class="center">
+           <div class="title">
+               <h1>Drop file to upload</h1>
+           </div>
+          <script language="javascript">
+      var changeimage = function (event) {
+
+
+           document.getElementById("upload_img").src = URL.createObjectURL(event.target.files[0]);
+
+   }
+   </script>
+
+           <div class="dropzone">
+               <img id="upload_img" src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" style="width: 50px;height: 50px" />
+               <input id="upload_file" onchange="changeimage(event)" type="file" class="upload-input" name="file" />
+           </div>
+
+           <button type="submit" class="btn" name="uploadbutton">Upload file</button>
+
+       </div>
+   </div>
+         </form>
+
+
+        <!-- Footer -->
+        <footer class="mt2 pb3 align--center">
+
+            <p class="mt1 small text--gray">Developed by <a href="https://www.vikneshwar.ml" class="link">TSS Gaming</a>.</p>
+        </footer>
+
+    </div>
+    </div>
+
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- The compiled JavaScript file -->
+    <script src="{{ url_for('static', filename='js/production.js') }}"></script>
+
+    </body>
+</html>

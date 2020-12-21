@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>Valorant Tournament</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">-->
+        <link href="{{ url_for('static', filename='css/production.css') }}" rel="stylesheet" media="all">
+        <!-- Web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+    </head>
+
+    <body class="has-animations">
+
+
+    <!-- Create outer border -->
+    <div class="page-border">
+    <div class="bg--white">
+
+        <!-- Header -->
+        <header class="align--center pt3 pb2">
+            <div class="container">
+
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="VAASTU ANALYSER" style="width: 100px;height: 100px;">
+                <h1 class="mb3 reveal-on-scroll is-revealing">Valorant Tournament</h1>
+                <h2 class="mb3 reveal-on-scroll is-revealing">Test</h2>
+
+            </div>
+        </header>
+        <!-- <button onclick="window.location.href='/pairing'" style="align-items:center;position: relative;display: block;
+          margin-left: auto;
+          margin-right: auto;"type="submit" class="btn" name="uploadbutton">Start Pairing</button> -->
+        <form action = "/pairing" method = "POST" enctype = "multipart/form-data">
+
+             <button style="align-items:center;position: relative;display: block;
+               margin-left: auto;
+               margin-right: auto;"type="submit" class="btn" name="uploadbutton">Start Pairing</button>
+
+
+
+         </form>
+        <div class="table-users">
+   <div class="header">Registered Teams</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>Team Name</th>
+         <th>Player Name(Captain)</th>
+         <th>Valorant Id</th>
+         <th>Discord Id</th>
+      </tr>
+      {% for i in range(0, num_teams) %}
+      <tr>
+         <td>{{ teams['TEAM NAME'][i] }}</td>
+         <td>{{ teams['Player 1 Name(CAPTAIN)'][i] }}</td>
+         <td>{{ teams['Player 1 in-game name with tag'][i] }}</td>
+         <td>{{ teams['Player 1 Discord id with tag'][i] }}</td>
+      </tr>
+      {% endfor %}
+   </table>
+</div>
+
+
+        <!-- Footer -->
+        <footer class="mt2 pb3 align--center">
+
+            <p class="mt1 small text--gray">Developed by <a href="https://www.vikneshwar.ml" class="link">TSS Gaming</a>.</p>
+        </footer>
+
+    </div>
+    </div>
+
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- The compiled JavaScript file -->
+    <script src="{{ url_for('static', filename='js/production.js') }}"></script>
+
+    </body>
+</html>

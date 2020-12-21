@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>VAASTU ANALYSER</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">-->
+        <link href="{{ url_for('static', filename='css/production.css') }}" rel="stylesheet" media="all">
+        <!-- Web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+    </head>
+
+    <body class="has-animations">
+
+
+    <!-- Create outer border -->
+    <div class="page-border">
+    <div class="bg--white">
+
+        <!-- Header -->
+        <header class="align--center pt3 pb2">
+            <div class="container">
+
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="VAASTU ANALYSER" style="width: 100px;height: 100px;">
+                <h1 class="mb3 reveal-on-scroll is-revealing">VAASTU ANALYSER</h1>
+                <h2 class="mb3 reveal-on-scroll is-revealing">A Vaastu analyser backed by Machine Learning and Computer Vision</h2>
+
+            </div>
+        </header>
+
+
+        <!-- Body -->
+
+            <div class="container">
+
+               <!-- Results -->
+                <section class="pt3 pb3 align--center">
+                    <h3 class="mb1">Results</h3>
+
+                    <h4>Analysed and Color coded Floorplan</h4>
+
+                   <img src="{{ result_image }}" style="width:500px">
+
+                    <table style="display: inline;">
+                       <tr>
+                           <th><div class="box bedroom" ></div></th>
+                           <th>-Bedroom</th>
+                        </tr>
+                        <tr>
+                            <th><div class="box kitchen" ></div></th>
+                            <th>-Living Room</th>
+                         </tr>
+
+                         <tr>
+                            <th><div class="box hall" ></div></th>
+                            <th>-Hall</th>
+                         </tr>
+                         <tr>
+                            <th><div class="box bathroom" ></div></th>
+                            <th>-Bathroom</th>
+                         </tr>
+                         <tr>
+                            <th><div class="box door" ></div></th>
+                            <th>-Door/window</th>
+                         </tr>
+                           <tr>
+                            <th><div class="box closet" ></div></th>
+                            <th>-closet</th>
+                         </tr>
+                        </table>
+                   <br>
+        <br>
+                   <h4>Findings</h4>
+                       <table style="display: inline;">
+                       <tr>
+                           {% for key, value in bedroom.items() %}
+                          {% set filename = "img/" + key + ".png" %}
+                           <th><img src="{{url_for('static', filename=filename)}}" style="width: 50px"></th>
+                           <th>{{ value }}</th>
+
+                        </tr>
+                           {% endfor %}
+                         <tr>
+                           {% for key, value in bathroom.items() %}
+                          {% set filename = "img/" + key + ".png" %}
+                           <th><img src="{{url_for('static', filename=filename)}}" style="width: 50px"></th>
+                           <th>{{ value }}</th>
+
+                        </tr>
+                           {% endfor %}
+
+
+                        </table>
+
+
+
+                </section>
+
+                <!-- Sponsors
+                <section class="pt3 pb3 align--center">
+                    <h3 class="mb2">Some generous peeps</h3>
+                    <img class="m1" src="img/stripe.svg" alt="Stripe" style="height:50px">
+                    <img class="m1" src="img/segment.svg" alt="Segment" style="height:45px">
+                    <img class="m1" src="img/newrelic.svg" alt="New Relic" style="height:35px">
+                    <img class="m1" src="img/drift.svg" alt="Drift" style="height:50px">
+                    <img class="m1" src="img/zopim.svg" alt="Zopim" style="height:50px">
+                </section>-->
+
+                <!-- Testimonials -->
+                <section class="pt2 pb3">
+                    <h3 class="align--center mb2">References</h3>
+
+                            <blockquote class="blockquote">
+                                <p>Deep Floor Plan Recognition using a Multi-task Network with Room-boundary-Guided Attention.<a href="https://arxiv.org/abs/1908.11025">Link to their Paper</a></p>
+                                <p>> <cite>Zhiliang ZENG, Xianzhi LI, Ying Kin Yu, and Chi-Wing Fu</cite></p>
+                            </blockquote>
+
+                </section>
+
+                <!-- CTA
+                <section class="align--center pt3 pb3">
+                    <p class="h3 mb2 reveal-on-scroll is-revealing">Tickets start at&nbsp;$950.</p>
+                    <a href="" class="btn btn--outline reveal-on-scroll is-revealing">Download Schedule</a>
+                    <a href="https://www.eventbrite.com/" class="btn btn--default reveal-on-scroll is-revealing">Get a ticket →</a>
+                    <p class="small mt1 text--gray">Tickets available on Eventbrite.</p>
+                </section>
+
+            </div>
+        </main>-->
+
+        <!-- Footer -->
+        <footer class="mt2 pb3 align--center">
+
+            <p class="mt1 small text--gray">Developed by <a href="https://www.vikneshwar.ml" class="link">Vikneshwar</a>.</p>
+        </footer>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- The compiled JavaScript file -->
+    <script src="{{ url_for('static', filename='js/production.js') }}"></script>
+
+    </body>
+</html>
+

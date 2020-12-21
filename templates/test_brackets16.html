@@ -1,0 +1,252 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/test2.css') }}">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1 style="text-align:center;padding-top:50px">Tournament Pairing</h1>
+  <h2 id='final' style="text-align:center;padding-top:10px">Final Winner :</h2>
+  <div class="bracket">
+    <section class="round quarterfinals">
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div1' class="participant"><span id='spn1'>{{ pairing[0] }}</span><button id="btn1">win</button></div>
+              <div id='div2' class="participant"><span id='spn2'>{{ pairing[1] }}</span><button id="btn2">win</button></div>
+            </div>
+
+          </div>
+          <div class="matchup">
+            <div class="participants">
+              <div id='div3' class="participant"><span id='spn3'>{{ pairing[2] }}</span><button id="btn3">win</button></div>
+              <div id='div4' class="participant"><span id='spn4'>{{ pairing[3] }}</span><button id="btn4">win</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div5' class="participant"><span id='spn5'>{{ pairing[4] }}</span><button id="btn5">win</button></div>
+              <div id='div6' class="participant"><span id='spn6'>{{ pairing[5] }}</span><button id="btn6">win</button></div>
+            </div>
+          </div>
+          <div class="matchup">
+            <div class="participants">
+              <div id='div7' class="participant"><span id='spn7'>{{ pairing[6] }}</span><button id="btn7">win</button></div>
+              <div id='div8' class="participant"><span id='spn8'>{{ pairing[7] }}</span><button id="btn8">win</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="round semifinals">
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div9' class="participant"><span id="spn9">TBD</span><button id="btn9">win</button></div>
+              <div id='div10' class="participant"><span id='spn10'>TBD</span><button id="btn10">win</button></div>
+            </div>
+          </div>
+          <div class="matchup">
+            <div class="participants">
+              <div id='div11' class="participant"><span id='spn11'>TBD</span><button id="btn11">win</button></div>
+              <div id='div12' class="participant"><span id='spn12'>TBD</span><button id="btn12">win</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="round finals">
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div13' class="participant"><span id='spn13'>TBD</span><button id="btn13">win</button></div>
+              <div id='div14' class="participant"><span id='spn14'>TBD</span><button id="btn14">win</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <div class="bracket">
+    <section class="round quarterfinals">
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div1' class="participant"><span id='spn1'>{{ pairing[0] }}</span><button id="btn1">win</button></div>
+              <div id='div2' class="participant"><span id='spn2'>{{ pairing[1] }}</span><button id="btn2">win</button></div>
+            </div>
+
+          </div>
+          <div class="matchup">
+            <div class="participants">
+              <div id='div3' class="participant"><span id='spn3'>{{ pairing[2] }}</span><button id="btn3">win</button></div>
+              <div id='div4' class="participant"><span id='spn4'>{{ pairing[3] }}</span><button id="btn4">win</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div5' class="participant"><span id='spn5'>{{ pairing[4] }}</span><button id="btn5">win</button></div>
+              <div id='div6' class="participant"><span id='spn6'>{{ pairing[5] }}</span><button id="btn6">win</button></div>
+            </div>
+          </div>
+          <div class="matchup">
+            <div class="participants">
+              <div id='div7' class="participant"><span id='spn7'>{{ pairing[6] }}</span><button id="btn7">win</button></div>
+              <div id='div8' class="participant"><span id='spn8'>{{ pairing[7] }}</span><button id="btn8">win</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="round semifinals">
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div9' class="participant"><span id="spn9">TBD</span><button id="btn9">win</button></div>
+              <div id='div10' class="participant"><span id='spn10'>TBD</span><button id="btn10">win</button></div>
+            </div>
+          </div>
+          <div class="matchup">
+            <div class="participants">
+              <div id='div11' class="participant"><span id='spn11'>TBD</span><button id="btn11">win</button></div>
+              <div id='div12' class="participant"><span id='spn12'>TBD</span><button id="btn12">win</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="connector">
+          <div class="merger"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="round finals">
+      <div class="winners">
+        <div class="matchups">
+          <div class="matchup">
+            <div class="participants">
+              <div id='div13' class="participant"><span id='spn13'>TBD</span><button id="btn13">win</button></div>
+              <div id='div14' class="participant"><span id='spn14'>TBD</span><button id="btn14">win</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <script type=text/javascript>
+    $("#btn1").click(function() {
+      $("#div1").toggleClass("winner");
+      $("#div2").toggleClass("loser");
+      $('#spn9').text($('#spn1').text());
+    });
+    $("#btn2").click(function() {
+      $("#div2").toggleClass("winner");
+      $("#div1").toggleClass("loser");
+      $('#spn9').text($('#spn2').text());
+    });
+    $("#btn3").click(function() {
+      $("#div3").toggleClass("winner");
+      $("#div4").toggleClass("loser");
+      $('#spn10').text($('#spn3').text());
+    });
+    $("#btn4").click(function() {
+      $("#div4").toggleClass("winner");
+      $("#div3").toggleClass("loser");
+      $('#spn10').text($('#spn4').text());
+    });
+    $("#btn5").click(function() {
+      $("#div5").toggleClass("winner");
+      $("#div6").toggleClass("loser");
+      $('#spn11').text($('#spn5').text());
+    });
+    $("#btn6").click(function() {
+      $("#div6").toggleClass("winner");
+      $("#div5").toggleClass("loser");
+      $('#spn11').text($('#spn6').text());
+    });
+    $("#btn7").click(function() {
+      $("#div7").toggleClass("winner");
+      $("#div8").toggleClass("loser");
+      $('#spn12').text($('#spn7').text());
+    });
+    $("#btn8").click(function() {
+      $("#div8").toggleClass("winner");
+      $("#div7").toggleClass("loser");
+      $('#spn12').text($('#spn8').text());
+    });
+    $("#btn9").click(function() {
+      $("#div9").toggleClass("winner");
+      $("#div10").toggleClass("loser");
+      $('#spn13').text($('#spn9').text());
+    });
+    $("#btn10").click(function() {
+      $("#div10").toggleClass("winner");
+      $("#div9").toggleClass("loser");
+      $('#spn13').text($('#spn10').text());
+    });
+    $("#btn11").click(function() {
+      $("#div11").toggleClass("winner");
+      $("#div12").toggleClass("loser");
+      $('#spn14').text($('#spn11').text());
+    });
+    $("#btn12").click(function() {
+      $("#div12").toggleClass("winner");
+      $("#div11").toggleClass("loser");
+      $('#spn14').text($('#spn12').text());
+    });
+    $("#btn13").click(function() {
+      $("#div13").toggleClass("winner");
+      $("#div14").toggleClass("loser");
+      $('#final').text('Final Winner : ' + $('#spn13').text());
+    });
+    $("#btn14").click(function() {
+      $("#div14").toggleClass("winner");
+      $("#div13").toggleClass("loser");
+    });
+  </script>
+
+  <script>
+    window.jQuery || document.write('<script src="{{
+      url_for('static', filename = 'jquery.js')
+    }
+    }
+    ">\x3C/script>')
+  </script>
+</body>
+
+</html>
